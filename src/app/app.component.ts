@@ -62,6 +62,7 @@ export class MyApp {
         }
         Observable.forkJoin(
           this.translate.get('Scan'),
+          this.translate.get('Containers'),
           this.translate.get('Search'),
           this.translate.get('Shop'),
           this.translate.get('Preferences')/*,
@@ -78,12 +79,13 @@ export class MyApp {
         ).subscribe(data => {
           this.pages = [
             { title: data[0], icon: 'qr-scanner', component: TabsNavigationPage },
-            { title: data[1], icon: 'search', component: FormsPage },
-            { title: data[2], icon: 'pricetags', component: FormsPage }
+            { title: data[1], icon: 'cube', component: TabsNavigationPage },
+            { title: data[2], icon: 'search', component: FormsPage },
+            { title: data[3], icon: 'pricetags', component: FormsPage }
           ];
 
           this.pushPages = [
-            { title: data[3], icon: 'settings', component: LayoutsPage }/*,
+            { title: data[4], icon: 'settings', component: LayoutsPage }/*,
             { title: data[4], icon: 'settings', component: SettingsPage } ,
             { title: data[5], icon: 'logo-wordpress', component: WordpressMenuPage },
             { title: data[6], icon: 'flame', component: FirebaseLoginPage } */
