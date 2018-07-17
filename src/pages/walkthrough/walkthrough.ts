@@ -3,6 +3,7 @@ import { NavController, Slides } from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 import { SignupPage } from '../signup/signup';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'walkthrough-page',
@@ -14,7 +15,9 @@ export class WalkthroughPage {
 
   @ViewChild('slider') slider: Slides;
 
-  constructor(public nav: NavController) {
+  constructor(
+    public nav: NavController,
+    private auth: AuthService) {
 
   }
 
@@ -33,7 +36,8 @@ export class WalkthroughPage {
   }
 
   goToLogin() {
-    this.nav.push(LoginPage);
+    console.log(`Login: `);
+    this.auth.login();
   }
 
   goToSignup() {

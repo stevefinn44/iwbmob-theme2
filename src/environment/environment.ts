@@ -10,7 +10,7 @@ export const environment = {
     storageBucket: "rosy-dynamics-171007.appspot.com",
     messagingSenderId: "303898922125"
   },
-  google_web_client_id: "1092390853283-i98feg7fb1dlsm92kkcbim62855pepi8.apps.googleusercontent.com",
+  google_web_client_id: "864801214277-2i8t2tprsq65760do7qd9bcgue65v5lk.apps.googleusercontent.com",
   facebook_app_id: 826720427470540,
   wordpress_url: 'https://wordpress.startapplabs.com/blog/',
   wordpress_rest_api_url: 'https://wordpress.startapplabs.com/blog/wp-json/wp/v2/'

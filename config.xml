@@ -126,6 +126,7 @@
     </plugin>
     <plugin name="cordova-plugin-ionic-webview" spec="1.1.19" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.1.2" />
-    <engine name="android" spec="~6.3.0" />
-    <engine name="ios" spec="~4.5.4" />
+    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="6.3.0" />
+    <allow-navigation href="http://192.168.1.156:8100" />
 </widget>

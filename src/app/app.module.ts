@@ -87,6 +87,8 @@ import { FirebaseAuthService } from '../pages/firebase-integration/firebase-auth
 import { WordpressService } from '../pages/wordpress-integration/wordpress-integration.service';
 import { LanguageService } from '../providers/language/language.service';
 
+
+
 // Ionic Native Plugins
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -108,6 +110,10 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HttpClientService } from '../services/httpClientService';
+import { AppSettings } from '../services/appSettings';
+import { AuthService } from '../services/auth.service';
+import { IonicStorageModule } from '../../node_modules/@ionic/storage';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -183,6 +189,7 @@ export function createTranslateLoader(http: HttpClient) {
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp, {
 			modalEnter: 'modal-slide-in',
 			modalLeave: 'modal-slide-out',
@@ -196,9 +203,9 @@ export function createTranslateLoader(http: HttpClient) {
 				deps: [HttpClient]
 			}
 		}),
-    AngularFireModule.initializeApp(environment.firebase),
+    /* AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule, */
 		VideoPlayerModule,
 		ValidatorsModule
   ],
@@ -236,14 +243,14 @@ export function createTranslateLoader(http: HttpClient) {
 		FormValidationsPage,
 		VideoPlaylistPage,
     //firebase integration
-    FirebaseFeedPage,
+    /* FirebaseFeedPage,
     FirebaseNewUserModalPage,
 		FirebaseDetailsPage,
 		FirebaseAvatarSelect,
     FirebaseLoginPage,
 		FirebaseSignupPage,
     FirebaseTabsNavigationPage,
-    FirebaseProfilePage,
+    FirebaseProfilePage, */
     //wordpress integration
     BlogFeedPage,
     BlogPostPage,
@@ -285,7 +292,11 @@ export function createTranslateLoader(http: HttpClient) {
 		AppRate,
 		ImagePicker,
 		Crop,
-		EmailComposer
+    EmailComposer,
+    HttpClientService,
+    AppSettings,
+    AuthService
+
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })

@@ -21,6 +21,7 @@ export class GoogleLoginPage {
   }
 
   ionViewDidLoad(){
+    console.log(`Login: `);
     this.loading.present();
 
     this.googleLoginService.getGoogleUser()

@@ -1,8 +1,9 @@
 {
-  "name": "ion2-fullapp-ELITE",
+  "name": "InWhichBag",
   "author": "Ionic Themes",
   "homepage": "https://ionicthemes.com",
   "private": true,
+  
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -19,6 +20,7 @@
     "@angular/http": "5.0.1",
     "@angular/platform-browser": "5.0.1",
     "@angular/platform-browser-dynamic": "5.0.1",
+    "@auth0/cordova": "^0.3.0",
     "@ionic-native/admob-free": "4.6.0",
     "@ionic-native/app-rate": "4.5.2",
     "@ionic-native/call-number": "4.5.2",
@@ -43,6 +45,7 @@
     "@types/googlemaps": "3.25.38",
     "angular2-text-mask": "8.0.4",
     "angularfire2": "5.0.0-rc.6",
+    "auth0-js": "^9.7.2",
     "bourbon": "5.0.0",
     "com-badrit-base64": "^0.2.0",
     "com.synconset.imagepicker": "^2.1.10",
@@ -54,6 +57,7 @@
     "cordova-plugin-apprate": "^1.4.0",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-crop": "^0.3.1",
+    "cordova-plugin-customurlscheme": "^4.3.0",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-email-composer": "^0.8.15",
@@ -67,6 +71,7 @@
     "cordova-plugin-ionic-keyboard": "^2.1.2",
     "cordova-plugin-ionic-webview": "^1.2.1",
     "cordova-plugin-nativestorage": "^2.3.1",
+    "cordova-plugin-safariviewcontroller": "^1.5.4",
     "cordova-plugin-splashscreen": "^4.1.0",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-telerik-imagepicker": "2.1.8",

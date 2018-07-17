@@ -9,6 +9,7 @@ import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 import { FacebookLoginService } from '../facebook-login/facebook-login.service';
 import { GoogleLoginService } from '../google-login/google-login.service';
 import { TwitterLoginService } from '../twitter-login/twitter-login.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'login-page',
@@ -25,7 +26,8 @@ export class LoginPage {
     public facebookLoginService: FacebookLoginService,
     public googleLoginService: GoogleLoginService,
     public twitterLoginService: TwitterLoginService,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    private auth: AuthService
   ) {
     this.main_page = { component: TabsNavigationPage };
 
@@ -36,6 +38,7 @@ export class LoginPage {
   }
 
   doLogin(){
+    this.auth.login();
     this.nav.setRoot(this.main_page.component);
   }
 

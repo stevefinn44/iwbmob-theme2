@@ -37,6 +37,7 @@ export class GoogleLoginService {
 
   doGoogleLogin()
   {
+    console.log(`Login: ${JSON.stringify(environment.google_web_client_id)}`);
     return new Promise<GoogleUserModel>((resolve, reject) => {
       this.googlePlus.login({
         'scopes': '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
